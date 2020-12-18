@@ -1,0 +1,130 @@
+:root {
+    --blue: rgb(30, 112, 185);
+    --green: rgb(0, 161, 155);
+    --pink: rgb(236, 100, 120);
+    --orange: rgb(238, 143, 80);
+}
+
+/* Makes padding and borders make more sense */
+*, *:before, *:after {
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Change */
+    color: white;
+    background-color: var(--blue);
+    overflow: hidden;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: center url(images/marble.jpg);
+    opacity: 0.05;
+}
+
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+    z-index: 10;
+}
+
+
+.decorative-shape {
+    margin: 0;
+    position: absolute;
+}
+
+.decorative-shape:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(images/marble.jpg);
+    opacity: 0.2;
+    display: none;
+}
+
+.polygon-1 {
+    width: 60vh;
+    height: 70vh;
+    background: var(--green);
+    clip-path: polygon(38% 7%, 87% 25%, 86% 72%, 20% 89%, 9% 45%);
+    animation: shape-change 11s infinite linear alternate;
+}
+
+.polygon-2 {
+    top: 60vh;
+    left: 85vw;
+    width: 40vh;
+    height: 65vh;
+    background: var(--pink);
+    clip-path: polygon(32% 9%, 67% 29%, 76% 62%, 35% 84%, 14% 44%);
+    animation: shape-change 8s infinite alternate-reverse;
+}
+
+.polygon-3 {
+    top: -30vh;
+    left: -5vw;
+    width: 50vh;
+    height: 60vh;
+    background: var(--green);
+    clip-path: polygon(94% 19%, 85% 83%, 35% 100%, 0 55%, 35% 6%);
+    animation: shape-change 6s infinite linear alternate-reverse;
+}
+
+.polygon-4 {
+    top: 78vh;
+    left: -10vw;
+    width: 55vh;
+    height: 50vh;
+    background: var(--pink);
+    clip-path: polygon(44% 2%, 93% 33%, 92% 82%, 8% 70%, 3% 15%);
+    animation: shape-change 7s infinite linear alternate;
+}
+
+.polygon-5 {
+    top: -10vh;
+    left: 88vw;
+    width: 30vh;
+    height: 35vh;
+    background: var(--orange);
+    clip-path: polygon(39% 7%, 87% 8%, 83% 80%, 40% 100%, 9% 52%);
+    animation: shape-change 9s infinite alternate-reverse;
+}
+
+
+
+/*
+.polygon-textured {
+    width: 60vh;
+    height: 70vh;
+    position: absolute;
+    left: 35vw;
+    top: 10vh;
+    z-index: -1;
+    clip-path: polygon(38% 7%, 87% 25%, 86% 72%, 20% 89%, 9% 45%);
+    opacity: .5;
+}
+*/
+
+@keyframes shape-change {
+    100% {
+        transform: matrix(1.3, 0.2, 0.35, 1.1, 20, -15) rotate(11deg);
+    }
+}
