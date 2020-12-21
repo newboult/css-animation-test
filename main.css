@@ -126,7 +126,7 @@ h1 {
 @keyframes shape-change {
     100% {
         clip-path: polygon(48% 9%, 71% 21%, 83% 85%, 24% 73%, 13% 36%);
-        transform: matrix(1.15, 0.2, 0.35, 1.1, 20, -15) rotate(20deg);
+        transform: matrix(1.35, 0.21, 0.15, 1.15, 55, -40) rotate(17deg);
         
     }
 }
