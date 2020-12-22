@@ -48,6 +48,8 @@ h1 {
     background-image: url(images/marble.jpg);
     background-size: 60%;
     background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-position: center;
     color: rgba(255,255,255,0.09);
     filter: brightness(3.5) contrast(0.9);
